@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Vectorium" />
+    <meta
+      name="description"
+      content="Vectorium resuelve derivadas, integrales y calculo vectorial paso a paso."
+    />
+    <title>Vectorium</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="intro-active">
+    <section class="splash" id="splash" aria-label="Pantalla de inicio">
+      <div class="splash-grid" aria-hidden="true">
+        <span>d/dt</span>
+        <span>int r(t) dt</span>
+        <span>nabla x F</span>
+        <span>r'(t)</span>
+      </div>
+      <div class="splash-core">
+        <img class="splash-logo" src="assets/black-wasp-logo-real.png" alt="Logotipo de Black Wasp Labs" />
+        <p class="lab-mark">De Black Wasp Labs</p>
+        <h1>Vectorium</h1>
+        <p class="splash-copy">Derivadas, integrales y calculo vectorial guiado paso a paso.</p>
+        <button class="enter-button" type="button" id="enter-app">Entrar al laboratorio</button>
+      </div>
+    </section>
+
+    <main class="app-shell">
+      <section class="workspace">
+        <aside class="sidebar" aria-label="Herramientas">
+          <div class="brand-block">
+            <img class="brand-logo" src="assets/black-wasp-logo-real.png" alt="" aria-hidden="true" />
+            <div>
+              <p class="eyebrow">Black Wasp Labs</p>
+              <h1>Vectorium</h1>
+            </div>
+          </div>
+          <div>
+            <p class="intro">
+              Resuelve funciones vectoriales por componentes y revisa el procedimiento paso a paso.
+            </p>
+          </div>
+
+          <nav class="tool-list" aria-label="Selector de herramienta">
+            <button class="tool-card active" type="button" data-tool="derivative">
+              <span>Derivada</span>
+              <small>r'(t), velocidad y aceleracion</small>
+            </button>
+            <button class="tool-card" type="button" data-tool="integral">
+              <span>Integral</span>
+              <small>Integral componente a componente</small>
+            </button>
+            <button class="tool-card" type="button" data-tool="operations">
+              <span>Operaciones</span>
+              <small>Punto, cruz y normas</small>
+            </button>
+            <button class="tool-card" type="button" data-tool="fields">
+              <span>Campos</span>
+              <small>Gradiente, divergencia, rotacional</small>
+            </button>
+            <button class="tool-card" type="button" data-tool="arc">
+              <span>Longitud de arco</span>
+              <small>Aproximacion numerica</small>
+            </button>
+          </nav>
+        </aside>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow" id="mode-eyebrow">Prioridad principal</p>
+              <h2 id="mode-title">Derivada de una funcion vectorial</h2>
+            </div>
+            <button class="ghost-button" type="button" id="load-example">Ejemplo</button>
+          </div>
+
+          <form class="solver-form" id="solver-form">
+            <div class="field-grid" id="dynamic-fields"></div>
+            <button class="primary-button" type="submit">Resolver paso a paso</button>
+          </form>
+
+          <section class="result-area" id="result-area" aria-live="polite">
+            <div class="empty-state">
+              <strong>Listo para calcular.</strong>
+              <span>Escribe una funcion como &lt;t^2, sin(t), e^t&gt; y presiona resolver.</span>
+            </div>
+          </section>
+        </section>
+      </section>
+      <footer class="legal-footer">
+        <p>VECTORMIND &copy; 2026 BLACK WASP LABS.</p>
+        <p>Creado y desarrollado por Jos&eacute; Ronaldo Naranjo Blanco.</p>
+        <p>Todos los derechos reservados.</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
